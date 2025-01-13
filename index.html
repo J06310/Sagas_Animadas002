@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Saga de Películas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Tres columnas */
+    gap: 10px; /* Espacio entre las películas */
+}
+
+.movie {
+    text-align: center;
+}
+
+.movie img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.movie:hover img {
+    transform: scale(1.05);
+}
+
+.movie h3 {
+    font-size: 14px;
+    margin: 8px 0;
+    color: #ffcc00;
+}
+
+/* Estilos del modal de la saga */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content-saga {
+    background-color: #000000; /* Fondo de la saga en color amarillo */
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 800px;
+    color: #000000;
+    text-align: center;
+    position: relative;
+}
+
+.modal-content-saga img {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    border-radius: 8px;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.modal-content-saga h3 {
+    color: #000000;
+}
+
+.modal-content-saga p {
+    margin: 10px 0;
+    color: #333333;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.modal-content-saga p i {
+    margin-right: 8px;
+    color: #000000;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    color: #ffffff; /* Cambié el color del "X" a blanco */
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #ffcc00;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #ff0000;
+}
+
+/* Estilos del modal individual de la película */
+.modal-content-movie {
+    background-color: #1c1c1c; /* Fondo de la película en color oscuro */
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 800px;
+    color: #ffffff;
+    text-align: center;
+    position: relative; /* Añadido para que el "X" quede dentro del modal */
+}
+
+.modal-content-movie img {
+    width: 40%;
+    height: auto;
+    max-width: 200px;
+    border-radius: 8px;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.modal-content-movie h3 {
+    color: #ffffff;
+}
+
+.modal-content-movie p {
+    margin: 10px 0;
+    color: #b0b0b0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.modal-content-movie p i {
+    margin-right: 8px;
+    color: #ffffff;
+}
+    </style>
+</head>
+<body>
+
+<h1 style="text-align: center; color: #ffffff;">A N I M A D A S</h1>
+
+<div class="grid">
+<!-- SAGA MEGAMENTE -->
+<div class="movie" onclick="openModal('modalMegamenteSaga')">
+    <img src="https://image.tmdb.org/t/p/original/hM4AlPr2HqgwpZyZCqFAquctUuA.jpg" alt="SAGA - MEGAMENTE">
+    <h3></h3>
+</div>
+
+
+<!-- AQUI VAN TODOS LOS MODALES DE CADA SAGA -->
+
+<div id="modalMegamenteSaga" class="modal">
+    <div class="modal-content-saga">
+        <span class="close" onclick="closeModal('modalMegamenteSaga')">&times;</span>
+        <div class="grid">
+            <div class="movie" onclick="openMovieModal('movieMegamente2010')">
+                <img src="https://image.tmdb.org/t/p/original/7l5OY9oeJyaB2XJKrg0du7pmi1C.jpg" alt="Megamente">
+                <h3></h3>
+            </div>
+            <div class="movie" onclick="openMovieModal('shortMegamenteButtonOfDoom2011')">
+                <img src="https://image.tmdb.org/t/p/original/1N7terrMeZPwK5qq31MUD0HQ3IG.jpg" alt="Megamente contra el sindicato de la perdición">
+                <h3></h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- AQUI VAN LOS MODALES DE LAS SAGAS -->
+
+<!-- AQUI ESTA LA SAGA DE "MEGAMENTE" -->
+
+<!-- INTENSAMENTE -->
+
+<!-- Modal de Megamente -->
+<div id="movieMegamente2010" class="modal">
+    <div class="modal-content-movie">
+        <span class="close" onclick="closeModal('movieMegamente2010')">&times;</span>
+        <img src="https://image.tmdb.org/t/p/original/7l5OY9oeJyaB2XJKrg0du7pmi1C.jpg" alt="Megamente">
+        <h3>MEGAMENTE</h3>
+        <p><i class="fas fa-calendar"></i> <strong>Año:</strong> 2010</p>
+        <p><i class="fas fa-film"></i> <strong>Género:</strong> Animación, Acción, Comedia, Familia, Aventura, Ciencia ficción</p>
+        <p><i class="fas fa-clock"></i> <strong>Duración:</strong> 1h 35 mins</p>
+        <p><i class="fas fa-book"></i> <strong>Sinopsis:</strong> Megamente es el supervillano más brillante que el mundo haya conocido. Y el que menos éxito tiene. Durante años, ha estado intentando conquistar Metro City por todos los medios posibles. Cada intento constituye un fracaso, por culpa de Metro Man, un héroe invencible hasta que Megamente consigue matarlo...</p>
+        <a href="https://vpn-movie-ofc.blogspot.com/2024/05/embed_27.html?r=aHR0cHM6Ly9naGJyaXNrLmNvbS9lL3huYmFrbWRpMzd3ag==" class="button" target="_blank">VER PELÍCULA</a>
+    </div>
+</div>
+
+<!-- AQUI ESTA LA SAGA DE "MEGAMENTE" -->
+
+<!-- MEGAMENTE CONTRA EL SINDICATO DE LA PERDICIÓN -->
+
+<!-- Modal de Megamente contra el sindicato de la perdición -->
+<div id="shortMegamenteButtonOfDoom2011" class="modal">
+    <div class="modal-content-movie">
+        <span class="close" onclick="closeModal('shortMegamenteButtonOfDoom2011')">&times;</span>
+        <img src="https://image.tmdb.org/t/p/original/1N7terrMeZPwK5qq31MUD0HQ3IG.jpg" alt="Megamente contra el sindicato de la perdición">
+        <h3>MEGAMENTE CONTRA EL SINDICATO DE LA PERDICIÓN</h3>
+        <p><i class="fas fa-calendar"></i> <strong>Año:</strong> 2011</p>
+        <p><i class="fas fa-film"></i> <strong>Género:</strong> Animación, Comedia, Ciencia ficción</p>
+        <p><i class="fas fa-clock"></i> <strong>Duración:</strong> 1h 25 mins</p>
+        <p><i class="fas fa-book"></i> <strong>Sinopsis:</strong> El antiguo equipo de villanos de Megamente, El sindicato de Doom, han regresado. Nuestro héroe cabezon azul recién coronado, ahora debe mantener apariencias malvadas hasta que pueda reunir a sus amigos para evitar que sus antiguos compañeros malvados lancen Metro City a la Luna.</p>
+        <a href="https://vpn-movie-ofc.blogspot.com/2024/05/embed_27.html?r=aHR0cHM6Ly9naGJyaXNrLmNvbS9lLzA2cHBseTEyc3FlYg==" class="button" target="_blank">VER PELÍCULA</a>
+    </div>
+</div>
+
+
+
+
+<script>
+    function openModal(modalId) {
+        document.getElementById(modalId).style.display = "block";
+    }
+
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = "none";
+    }
+
+    function openMovieModal(movieId) {
+        document.getElementById(movieId).style.display = "block";
+    }
+</script>
+
+</body>
+</html>
