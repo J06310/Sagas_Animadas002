@@ -160,6 +160,29 @@
     margin-right: 8px;
     color: #ffffff;
 }
+.movie {
+    position: relative;
+}
+
+.movie-poster {
+    position: relative;
+}
+
+.movie-poster img {
+    display: block;
+    width: 100%;
+}
+
+.label {
+    position: absolute;
+    top: 4px;
+    left: 60px;
+    background-color: red;
+    color: white;
+    padding: 3px 5px;
+    font-size: 12px;
+    border-radius: 3px;
+}
     </style>
 </head>
 <body>
@@ -169,22 +192,22 @@
 <div class="grid">
 <!-- SAGA MEGAMENTE -->
 <div class="movie" onclick="openModal('modalMegamenteSaga')">
-    <img src="https://image.tmdb.org/t/p/original/hM4AlPr2HqgwpZyZCqFAquctUuA.jpg" alt="SAGA - MEGAMENTE">
+    <img src="https://image.tmdb.org/t/p/original/hM4AlPr2HqgwpZyZCqFAquctUuA.jpg" alt="SAGA - MEGAMENTE"><div class="label">#1</div>
     <h3></h3>
 </div>
 <!-- SAGA - HERMANO OSO -->
 <div class="movie" onclick="openModal('modalHermanoOsoSaga')">
-    <img src="https://image.tmdb.org/t/p/original/8VMn2LcKIfDGptN3VtGbq4SLl3H.jpg" alt="SAGA - HERMANO OSO">
+    <img src="https://image.tmdb.org/t/p/original/8VMn2LcKIfDGptN3VtGbq4SLl3H.jpg" alt="SAGA - HERMANO OSO"><div class="label">#2</div>
     <h3></h3>
 </div>
 <!-- SAGA - EL GATO CON BOTAS -->
 <div class="movie" onclick="openModal('modalGatoConBotasSaga')">
-    <img src="https://image.tmdb.org/t/p/original/xXaKhIXRrt7RvqHep6rN0hIeZZz.jpg" alt="SAGA - EL GATO CON BOTAS">
+    <img src="https://image.tmdb.org/t/p/original/xXaKhIXRrt7RvqHep6rN0hIeZZz.jpg" alt="SAGA - EL GATO CON BOTAS"><div class="label">#3</div>
     <h3></h3>
 </div>
 <!-- SAGA - MONSTRUOS, INC. -->
 <div class="movie" onclick="openModal('modalMonstruosIncSaga')">
-    <img src="https://image.tmdb.org/t/p/original/A80OL7TGebwHpjyMcrNFt3us5G1.jpg" alt="SAGA - MONSTRUOS, INC.">
+    <img src="https://image.tmdb.org/t/p/original/A80OL7TGebwHpjyMcrNFt3us5G1.jpg" alt="SAGA - MONSTRUOS, INC."><div class="label">#4</div>
     <h3></h3>
 </div>
 </div>
